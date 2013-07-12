@@ -5,3 +5,15 @@
 *.war
 *.ear
 /DBoxClient/nbproject/private/
+/DBoxClient/build/
+/DBoxClient/dist/
+/tryHash/nbproject/private/
+/tryHash/build/
+/tryHash/dist/
+/serverTime/nbproject/private/
+/serverTime/dist/
+/serverTime/build/
+/consoleTest/nbproject/private/
+/WatchDir/nbproject/private/
+/WatchDir/build/
+/WatchDir/dist/
