@@ -206,24 +206,9 @@ public class WatchDir
     public static void main(String[] args) throws IOException
     {
         // parse arguments
-        if (args.length == 0 || args.length > 2)
-        {
-            usage();
-        }
-        boolean recursive = false;
-        int dirArg = 0;
-        if (args[0].equals("-r"))
-        {
-            if (args.length < 2)
-            {
-                usage();
-            }
-            recursive = true;
-            dirArg++;
-        }
 
         // register directory and process its events
-        Path dir = Paths.get(args[dirArg]);
-        new WatchDir(dir, recursive).processEvents();
+        Path dir = Paths.get("D:\\bla");
+        new WatchDir(dir, true).processEvents();
     }
 }
