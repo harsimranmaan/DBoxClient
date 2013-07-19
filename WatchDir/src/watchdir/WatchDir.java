@@ -59,6 +59,7 @@ public class WatchDir
     private void register(Path dir) throws IOException
     {
         WatchKey key = dir.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+        listofFile(dir.toString());
         if (trace)
         {
             Path prev = keys.get(key);
@@ -210,5 +211,17 @@ public class WatchDir
         // register directory and process its events
         Path dir = Paths.get("D:\\bla");
         new WatchDir(dir, true).processEvents();
+    }
+
+    public void listofFile(String path)
+    {
+
+        File folder = new File(path);
+        File[] listOfFiles = folder.listFiles();
+        for (int i = 0; i < listOfFiles.length; i++)
+        {
+            System.out.println("" + listOfFiles[i].getPath());
+        }
+
     }
 }

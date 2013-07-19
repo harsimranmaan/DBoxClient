@@ -60,10 +60,11 @@ public class Hash implements Serializable
         clientMap.put("abc.doc", "23434@eee34343pi4i34");
         clientMap.put("Kuntal.html", "23434@eee34343pi4i34");
         clientMap.put("Kuntalpk.php", "97777");
+        clientMap.put("Kuntalpk.kk", "dddddddddddddddddddddd");
 
 
 
-        clientLog = new File("dblike.dat");
+        clientLog = new File(".dblike");
         if (!clientLog.exists())
         {
             writeClientLog();
@@ -76,7 +77,7 @@ public class Hash implements Serializable
 
             mergeHashes();
             tempMap.putAll(clientMap);
-            System.out.println("" + tempMap);
+            System.out.println(tempMap);
 
 
             writeClientLog();
